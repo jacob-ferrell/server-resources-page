@@ -1,0 +1,141 @@
+
+:root {
+    --blue: #007997;
+    --dark-blue: #006a84;
+}
+html {
+    display: grid;
+    min-height: 100%;
+    color: white;
+}
+body {
+    background-color: #353c42;;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    width: 100%;
+    text-align: center;
+    background-color: #272c30;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+header h3 {
+    height: fit-content;
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container > div {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: end;
+    gap: .5rem;
+    width:  20%;
+    height: 8rem;
+    border-radius: 10px;
+    cursor: default;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container > div > div {
+    width: 100%;
+    text-align: center;
+}
+
+.container > div:hover {
+    transform: scale(1.04);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.cpu, .ram, .disk, .ext-disk {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cpu {
+    background-color: #007997;
+    background-image: url('../images/cpu-svg.svg');
+    background-size: 4rem auto;
+}
+
+.meter {
+    fill: white;
+    height: 1.25rem;
+    width: auto;
+    display: none;
+}
+
+.ram {
+    background-color: #913225;
+    background-image: url('../images/ram-svg.svg');
+    background-size: 4rem auto;
+}
+
+.ext-disk {
+    background-color: rgb(0, 92, 50);
+    background-image: url('../images/hdd-svg.svg');
+    background-size: 3rem auto;
+}
+.disk {
+    background-color: rgb(177, 114, 12);
+    background-image: url('../images/hdd-svg.svg');
+    background-size: 3rem auto;
+}
+
+.container h3 {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    margin-bottom: .75rem;
+    background-color: #272c304b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -1rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.status-bar-container {
+    width: 80%;
+    height: 20%;
+    margin: 0;
+    background-color: #4caf50;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.status-bar {
+    height: 100%;
+    background-color: red;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+div .temp, div .usage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
